@@ -1,6 +1,6 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+# GO 101
 
-# Go Zero to 10x Architect: Complete Learning Roadmap
+# Go Zero to HERO: Complete Learning Roadmap
 
 A comprehensive guide to mastering Go programming from absolute beginner to systems architect level. This roadmap includes detailed projects, learning objectives, resources, and practical knowledge to build real expertise in production Go development.
 

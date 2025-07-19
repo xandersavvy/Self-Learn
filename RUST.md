@@ -1,5 +1,7 @@
 <!-- Made this using perplexity Pro via Airtel India  -->
 
+# RUST 101
+
 # Rust Zero to hero: Complete Learning Roadmap
 
 A comprehensive guide to mastering Rust programming from absolute beginner to systems architect level. This roadmap includes detailed projects, learning objectives, resources, and practical hints to build real expertise.
