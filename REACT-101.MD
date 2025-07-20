@@ -85,18 +85,212 @@ _A structured, project-based curriculum with curated learning links and proven d
 | Video Series            | Programming with Mosh React 18 course [5]            |
 | Interactive Labs        | Codecademy React 101 [24] - React Tutorial App [25]  |
 
-## 8 Progress & Reflection
 
-While this roadmap omits built-in tracking, use whichever method you prefer:
 
-- GitHub Projects or Issues per milestone
-- A simple `progress.md` checklist in your repo
-- Personal knowledge journal (Notion, Obsidian, etc.)
+# Comprehensive React & Angular Interview Question Bank
 
-### Finish Line
+This extensive collection covers **practical UI and architecture patterns** in React and Angular—from fundamentals through advanced mastery, including state management, data flows, performance, micro-frontend integration, UI patterns (infinite scrolling, pagination, virtualization), forms, routing, component design, testing, and more. Obsolete patterns (e.g. mixins, deprecated lifecycle methods, AngularJS) are omitted.
 
-Complete every phase, refactor with at least three design patterns, deploy two projects (Netlify / Vercel), and you’ll possess the practical skill set and architectural insight expected of a senior React engineer. Happy building!
+## 1. Core Framework Concepts
 
+1. Explain the virtual DOM in React and change detection in Angular.  
+2. Describe React’s reconciliation algorithm and Angular’s zone.js change detection.  
+3. How do function components differ from class components in React?  
+4. Explain Angular’s NgModule, declarations, imports, providers, and bootstrap.  
+5. How do you lazy-load modules in Angular?  
+6. What are React Hooks and why were they introduced?  
+7. Explain dependency injection in Angular and hierarchical injectors.  
+8. How do you create and use custom React Hooks?  
+9. Describe ViewEncapsulation modes in Angular.  
+10. How do you handle template vs. reactive forms in Angular?
+
+## 2. Component & UI Design Patterns
+
+11. Presentational vs. Container components (React) / Smart vs. Dumb components (Angular).  
+12. Higher-Order Components (HOCs) and Render Props in React.  
+13. Compound Components pattern in React.  
+14. Controlled vs. Uncontrolled components (React forms).  
+15. Dynamic component loading with `React.lazy`/`Suspense` and Angular `loadChildren`.  
+16. Provider pattern and Context API in React / Service providers in Angular.  
+17. Feature modules and Shared modules in Angular.  
+18. Portal pattern (`ReactDOM.createPortal`) and Angular CDK portals.  
+19. Slot/Content projection with Angular `ng-content` vs. React `props.children`.  
+20. Forwarding refs in React (`forwardRef`) vs. `@ViewChild` in Angular.
+
+## 3. State Management & Data Flow
+
+21. Local component state with `useState` (React) vs. component class properties (Angular).  
+22. Lifting state up in React vs. shared services in Angular.  
+23. Context API vs. Redux / NgRx store for global state.  
+24. Immutable state updates with `Immer` or spread operators.  
+25. Selector patterns (`reselect` in React, `createSelector` in NgRx).  
+26. Effects/middleware (`redux-saga`, `redux-thunk` vs. NgRx Effects).  
+27. Reactive forms state (`FormGroup`/`FormControl`) vs. uncontrolled React refs.  
+28. Normalized state shape and entity adapters.  
+29. Undo/redo patterns via action history.  
+30. Optimistic UI updates and rollback strategies.
+
+## 4. UI Patterns
+
+31. Infinite scrolling vs. pagination; implement with Intersection Observer (React/Angular CDK).  
+32. Virtualized lists (`react-window`/`react-virtualized` vs. Angular CDK `VirtualScrollViewport`).  
+33. Skeleton loading placeholders for data fetching.  
+34. Progressive image loading and lazy loading (`img loading="lazy"` vs. `NgOptimizedImage`).  
+35. Form wizards (multi-step forms) with React Router or Angular Router child routes.  
+36. Debounced search with RxJS `debounceTime` (Angular) vs. `useDebounce` hook (React).  
+37. Infinite form fields (dynamic `FieldArray` in React Hook Form / `FormArray` in Angular).  
+38. Tree view and nested menus using recursion.  
+39. Drag-and-drop via `react-dnd` vs. Angular CDK DragDrop.  
+40. Modal and dialog service patterns (`react-modal` vs. Angular Material Dialog service).  
+41. Toast/notification service with singleton manager component.  
+42. Tabs, accordions, and collapsible panels.  
+43. Breadcrumbs component (React Router vs. Angular Router breadcrumbs).  
+44. Side-drawer navigation and responsive layout.  
+45. Responsive image sets and art direction (`srcset`/`sizes`).  
+46. Pagination controls with page number ranges and ellipses.  
+47. Infinite canvas and pinch-zoom gestures with React-PanZoom vs. Angular HammerJS.  
+48. Accessible UI patterns: ARIA roles, keyboard navigation.  
+49. Loading spinners vs. progress bars.  
+50. Dark mode toggle and theming via CSS variables or Angular theming.
+
+## 5. Routing & Navigation
+
+51. React Router: nested routes, redirect, dynamic segments.  
+52. Angular Router: child routes, guards (`CanActivate`, `CanDeactivate`).  
+53. Route preloading strategies in Angular.  
+54. Code splitting and route-based bundling in React.  
+55. History management: hash vs. browser vs. memory routers.  
+56. Parameterized routes and query parameters.  
+57. Route resolvers (Angular) vs. data loaders (React Router v6.4+).  
+58. Scroll restoration on navigation.  
+59. Route transitions and animated page changes.  
+60. Handling 404 and wildcard routes.
+
+## 6. Data Fetching & Side Effects
+
+61. Fetching via `fetch` or `axios` in React; `HttpClient` in Angular.  
+62. Suspense data fetching with React Query or SWR vs. Angular HTTP interceptors.  
+63. Polling and real-time updates via WebSocket or Server-Sent Events.  
+64. Cancelable requests with `AbortController` vs. RxJS `takeUntil`.  
+65. Data caching and stale-while-revalidate strategies.  
+66. Prefetching and preloading data on hover or in background.  
+67. Error boundaries (React) vs. ErrorHandler (Angular).  
+68. Global loading indicator via interceptor or Redux middleware.  
+69. Optimistic UI with mutation queues.  
+70. Blob and file upload/download handling.
+
+## 7. Styling & Theming
+
+71. CSS Modules and styled-components in React vs. SCSS, CSS custom properties in Angular.  
+72. CSS-in-JS (`styled-components`, `emotion`) vs. Angular component styles.  
+73. Theming via context (React) vs. theming service (Angular Material).  
+74. Utility-first CSS (Tailwind) integration.  
+75. Responsive design with media queries and Flexbox/Grid.  
+76. CSS variables for dynamic theming.  
+77. BEM and naming conventions vs. Angular ViewEncapsulation.  
+78. Dark mode strategy with `prefers-color-scheme` or JS toggles.  
+79. Inline styles vs. external stylesheets trade-offs.  
+80. SVG inlining and icon sprite patterns.
+
+## 8. Performance Optimization
+
+81. Memoization with `React.memo` and `useMemo` vs. `OnPush` change detection in Angular.  
+82. Avoiding unnecessary re-renders with `shouldComponentUpdate` or `PureComponent`.  
+83. Lazy loading images and code.  
+84. Intersection Observer for infinite scroll and visibility detection.  
+85. Chunking large computations with `requestIdleCallback` or Web Workers.  
+86. Pre-compiling templates (Angular AOT) vs. React production builds.  
+87. Bundle analysis (`webpack-bundle-analyzer`, `source-map-explorer`).  
+88. Service Worker and PWA caching strategies.  
+89. SSR hydration performance: Next.js vs. Angular Universal.  
+90. Client-side caching (IndexedDB via Dexie) and offline support.
+
+## 9. Testing & QA
+
+91. Unit tests with Jest/React Testing Library vs. Jasmine/Karma/Angular Testing Library.  
+92. Component snapshot testing vs. fixture-based tests.  
+93. End-to-end tests with Cypress or Playwright.  
+94. Mocking network requests with MSW (Mock Service Worker) vs. HttpTestingController.  
+95. Accessibility testing with `axe-core/react` vs. `@angular/cdk/a11y`.  
+96. Visual regression testing with Chromatic or Percy.  
+97. Test coverage thresholds and enforcement.  
+98. Integration tests for Redux/Ngrx stores.  
+99. Testing effects/side-effects with `redux-saga-test-plan` vs. `NgRx Testing`.  
+100. Performance testing with Lighthouse CI.
+
+## 10. Micro-Frontends & Integration
+
+101. Micro-frontend approaches: module federation (Webpack 5) vs. single-spa.  
+102. Shared dependencies and version alignment.  
+103. CSS isolation and scoping strategies.  
+104. Communication between micro-frontends via custom events or state stores.  
+105. Bootstrapping multiple SPA frameworks concurrently.  
+106. Deploying fragments via CDN and dynamic loading.  
+107. Single Sign-On integration across hosts.  
+108. Cross-micro app routing and navigation.  
+109. Shared authentication and user context.  
+110. Error isolation and fallback UIs.
+
+## 11. Accessibility & Internationalization
+
+111. Keyboard navigation and focus management.  
+112. ARIA roles, states, and properties for custom components.  
+113. Announcing changes via `aria-live` regions.  
+114. Color contrast auditing and theming.  
+115. Internationalization with `react-intl` or `ngx-translate`.  
+116. Right-to-left (RTL) support in layouts.  
+117. Locale-aware date/number formatting.  
+118. Dynamic language switching at runtime.  
+119. Handling pluralization and ICU message syntax.  
+120. Testing accessibility with `jest-axe` or `axe-puppeteer`.
+
+## 12. Security & Best Practices
+
+121. Prevent XSS via safe interpolation and sanitization (`DOMPurify`, Angular’s built-in sanitization).  
+122. CSRF protection for REST APIs.  
+123. Secure local storage usage and encryption.  
+124. Handling JWT securely (httpOnly cookies vs. storage).  
+125. OAuth2 flows in SPA (PKCE).  
+126. Content Security Policy configuration.  
+127. Dependency vulnerability scanning (`npm audit`, `ngx-audit`).  
+128. Linting rules for code quality (ESLint, TSLint migrations).  
+129. Secure coding guidelines for user input handling.  
+130. CSP reporting and violation monitoring.
+
+## 13. Advanced Topics
+
+131. Server-side rendering with Next.js vs. Angular Universal.  
+132. Static site generation vs. full SPA.  
+133. Incremental static regeneration (ISR) in Next.js.  
+134. Data fetching strategies: SSG, SSR, CSR, ISR.  
+135. WebSockets and real-time updates with `socket.io` or RxJS WebSocket.  
+136. GraphQL integration with Apollo Client vs. `apollo-angular`.  
+137. Optimistic UI and cache updates in GraphQL.  
+138. Revalidation and stale-while-revalidate in SWR/React Query.  
+139. Microservice API gateway patterns in front-end (BFF).  
+140. Edge computing: deploying UI assets at CDN edge workers.
+
+
+[1] https://dev.to/anuradha9712/react-design-patterns-2acc
+[2] https://roshancloudarchitect.me/mastering-design-patterns-in-angular-building-scalable-and-maintainable-web-applications-fc3d5c682942
+[3] https://js.devexpress.com/Angular/Demos/WidgetsGallery/Demo/DataGrid/InfiniteScrolling/
+[4] https://radixweb.com/blog/react-design-patterns
+[5] https://www.geeksforgeeks.org/system-design/design-patterns-in-angular/
+[6] https://dev.to/anirbmuk/angular-infinite-scrolling-using-rxjs-and-ngrx-4p8i
+[7] https://reactpatterns.com
+[8] https://angular-enterprise.com/en/ngpost/courses/design-patterns/
+[9] https://www.pluralsight.com/resources/blog/guides/how-to-implement-infinite-scrolling-with-reactjs
+[10] https://refine.dev/blog/react-design-patterns/
+[11] https://dev.to/galwhocod3z/design-patterns-angular-34dk
+[12] https://dev.to/dipakahirav/day-8-angular-signals-and-infinite-scrolling-5e4f
+[13] https://www.patterns.dev/react/
+[14] https://blogs.halodoc.io/commonly-used-design-patterns-in-angular/
+[15] https://stackoverflow.com/questions/72816124/how-to-implement-infinite-scrolling-with-infinite-data-in-react
+[16] https://magicui.design/blog/react-design-patterns
+[17] https://material.angular.dev
+[18] https://blog.ag-grid.com/implementing-infinite-loading-in-an-angular-store-application/
+[19] https://ui-patterns.com/patterns
+[20] https://www.youtube.com/watch?v=TwPcU7Zu3nI
 [1] https://legacy.reactjs.org
 [2] https://react.dev/learn
 [3] https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started

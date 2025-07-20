@@ -954,9 +954,80 @@ class EnterpriseEventBus {
   }
 }
 ```
+1. What is Lightning Web Components (LWC), and how does it differ from Aura components?[1]
+2. Describe the file bundle structure of an LWC ( .html, .js, .css, -meta.xml ).[2]
+3. Explain the LWC lifecycle hooks and the order in which they fire:  
+   -  constructor()  
+   -  connectedCallback()  
+   -  renderedCallback()  
+   -  errorCallback(error, stack)  
+   -  disconnectedCallback()[3]
+4. How does Shadow DOM encapsulation work in LWC templates?[4]
+5. What are the key importable modules in “lightning/uiRecordApi,” and how do you use them to create, read, update, delete records without Apex? (e.g. getRecord, updateRecord, deleteRecord, createRecord)[5]
+6. Compare calling Apex imperatively vs. using @wire in LWC. When must you use each?[6]
+7. Explain reactive properties:  
+   -  @api for public reactive properties  
+   -  @track for private reactive state (pre-Spring ’20 only; now all non-primitive state is reactive automatically)  
+   -  @wire for wire-adapters and wire-methods[2]
+8. How do you pass data from parent to child ( @api ) and child to parent (CustomEvent) in LWC?[5]
+9. What does composed=true do when dispatching CustomEvents across shadow DOM boundaries?[7]
+10. How do you implement two unrelated component communication? (Lightning Message Service)[5]
+11. Describe the Lightning Data Service (LDS) and its benefits over Apex for CRUD operations.[6]
+12. How do you use getListUi, getObjectInfo, getPicklistValues wire-adapters from “lightning/ui*Api”?  
+13. Explain imperative vs. declarative navigation using NavigationMixin.  
+14. How do you handle record editing in lightning-record-form, lightning-record-edit-form, and lightning-record-view-form?  
+15. How can you implement infinite scrolling in LWC? (IntersectionObserver or scroll handler + buffer)[2]
+16. Describe list virtualization (lightning-virtual-scroller) and when to use it.[8]
+17. How do you debounce user input in an input field? (Lodash debounce, setTimeout, or RxJS)  
+18. What are best practices for LWC CSS and SLDS styling? (kebab-case classes, shareable CSS modules)  
+19. How do you use lightning-datatable for inline editing, pagination, and custom data types?  
+20. Explain how to create dynamic component composition using lightning-dynamic-component.  
+21. Describe how to programmatically create or remove elements via rendering hooks.  
+22. How do you write unit tests for LWC with Jest? (shallow/mount, @salesforce/sfdx-lwc-jest)[8]
+23. How to mock Apex calls in Jest and validate wire-adapters?  
+24. How do you perform LWC integration tests using WebdriverIO or Protractor?  
+25. Explain performance optimization strategies in LWC:  
+   -  Use @wire instead of imperative Apex where possible[6]
+   -  Cache via @AuraEnabled(cacheable=true) Apex methods[9]
+   -  Limit DOM updates, use OnPush change detection patterns via pure getters  
+   -  Bundle size optimization and lazy loading (dynamic import)  
+26. How do you handle errors globally in LWC? (errorCallback, ShowToastEvent)  
+27. Describe security considerations: XSS prevention, Locker Service, CSS encapsulation, CSP.  
+28. What are Lightning Message Channels (LMS) and how do they differ from pub/sub events?[5]
+29. How do you expose an LWC for Experience Builder (site), Flow screen component, or App Builder? ( targets in meta-xml )  
+30. Explain how to create a custom label in LWC and access translations ( $Label.namespace.labelName )[1]
+31. How do you use navigation and pageReference utils to integrate with Lightning Navigation?  
+32. Describe record-edit modal usage (lightning-record-edit-form with onsuccess/oncancel).  
+33. How do you call imperative Apex from LWC, handle @AuraEnabled(cacheable=true) vs. non-cacheable?  
+34. What patterns do you use for reusable, configurable LWC components? (composition, public config via meta)  
+35. Explain use of template directives: if:true, if:false, for:each, for:item, key, template.  
+36. How do you implement dynamic CSS class binding? (classMap, classList API or object literal)  
+37. How do you handle localization and date/number formatting? (`Intl` API, @salesforce/i18n)  
+38. Describe how to use SVG icons and static resources in LWC.  
+39. How do you optimize LWC for mobile devices? (responsive design, mobile-first CSS)  
+40. Explain how to use Lightning Out and LWC OSS for standalone web apps.  
 
-This comprehensive guide covers all aspects of Lightning Web Components necessary for building enterprise-scale applications, integrating with external systems, and mastering the platform for professional development and interviews. The patterns and practices outlined here represent industry best practices and real-world implementation strategies used in production Salesforce environments.
 
+[1] https://developer.salesforce.com/docs/platform/lwc/overview
+[2] https://www.simplilearn.com/lwc-interview-questions-article
+[3] https://www.salesforceben.com/lightning-web-components/
+[4] https://www.salesforcetroop.com/lwc/introduction-to-lightning-web-component/
+[5] https://salesforcegeek.in/lwc-interview-questions-and-answers/
+[6] https://www.apexhours.com/lightning-web-components-lwc-part-2/
+[7] https://www.crsinfosolutions.com/61-lwc-lightning-web-component-interview-questions/
+[8] https://saramorgan.net/2022/09/27/top-five-best-practices-for-lightning-web-components/
+[9] https://www.pantherschools.com/lightning-web-component-best-practices/
+[10] https://www.linkedin.com/pulse/best-practices-lwc-suraj-ghodmare
+[11] https://www.apexhours.com/lightning-web-components/
+[12] https://cloudintellect.in/lwc-interview-questions/
+[13] https://www.techforceacademy.com/lightning-web-components-guide/
+[14] https://www.apexhours.com/design-patterns-and-best-practices-to-build-reusable-lightning-web-components/
+[15] https://s2-labs.com/blog/lwc-interview-questions/
+[16] https://s2-labs.com/blog/salesforce-lightning-web-components/
+[17] https://www.sfapps.info/110-salesforce-lwc-interview-questions-and-answers/
+[18] https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics
+[19] https://developer.salesforce.com/docs/platform/lwc/guide/get-started-best-practices.html
+[20] https://www.interviewbit.com/lwc-interview-questions/
 [1] https://www.linkedin.com/pulse/shadow-dom-lwc-avoiding-css-conflicts-rtnoc
 
 [2] https://developer.salesforce.com/docs/platform/lwc/guide/create-dom.html

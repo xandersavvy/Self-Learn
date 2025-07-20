@@ -188,9 +188,150 @@ Angular’s latest evolution removes friction and rewards **proactive architectu
 3. **Ship** SSR-hydrated, a11y-first applications with confidence.
 4. **Lead** engineering culture—testing, security, DevOps—in any Angular organization.
 
-Follow the timeline, treat each capstone as production code, and document your decisions. In doing so, you will emerge as a principal-level Angular engineer capable of guiding large-scale, high-performance projects.
 
 [ANGULAR PROJECTS](./ANGULAR_PROJECTS.MD)
+
+## 1. Framework Fundamentals  
+1. Explain the role of NgModule and its metadata: `declarations`, `imports`, `exports`, `providers`, `bootstrap`.  
+2. How does Angular’s hierarchical Dependency Injection work?  
+3. Describe the component lifecycle hooks: `OnInit`, `OnChanges`, `DoCheck`, `AfterViewInit`, etc.  
+4. How does Ivy’s incremental DOM differ from ViewEngine?  
+5. What are Angular decorators: `@Component`, `@Directive`, `@Injectable`, `@Pipe`?  
+6. Explain Angular CLI project structure and workspace configuration.  
+7. How do you configure multiple environments and replace files via `angular.json`?  
+8. What is AOT vs. JIT compilation? Benefits and trade-offs.  
+9. Explain Angular zones and change detection strategy (`Default` vs. `OnPush`).  
+10. How do you disable zone.js for performance (Zone-less Angular)?  
+
+## 2. Components & Templates  
+11. How to create structural (`*ngIf`, `*ngFor`) vs. attribute directives.  
+12. Explain content projection using `` and multi-slot projection.  
+13. How to dynamically create components via `ComponentFactoryResolver` or Ivy’s `ViewContainerRef.createComponent`.  
+14. Describe template reference variables (`#ref`) and `@ViewChild`/`@ContentChild`.  
+15. How to pass data between components: Input/Output, `EventEmitter`, shared services.  
+16. What are template vs. reactive forms? When to use each.  
+17. How to implement form validation: built-in validators, custom validators, `AsyncValidator`.  
+18. Explain use of `FormArray` for dynamic lists of controls.  
+19. How to implement nested reactive forms and patch values.  
+20. How to use Angular Material or NG-Bootstrap to build UI components.  
+
+## 3. Routing & Navigation  
+21. Configure routes with `RouterModule.forRoot()` and child routes with `forChild()`.  
+22. Explain route parameters, query parameters, and `RouteReuseStrategy`.  
+23. How to guard routes using `CanActivate`, `CanDeactivate`, `Resolve`, `CanLoad`.  
+24. How to implement lazy-loaded feature modules and preloading strategies.  
+25. How to handle not found and wildcard routes.  
+26. How to preserve scroll position and implement scroll restoration.  
+27. How to animate route transitions with Angular animations.  
+28. Explain router events: `NavigationStart`, `RoutesRecognized`, `NavigationEnd`.  
+29. How to implement secondary/outlet routing (named outlets).  
+30. How to perform programmatic navigation and relative vs. absolute paths.  
+
+## 4. State Management & Data Flow  
+31. Compare local component state vs. shared service state.  
+32. Explain RxJS Observables vs. Promises in Angular.  
+33. How to manage global state with NgRx Store: actions, reducers, selectors, effects.  
+34. Describe component store (`@ngrx/component-store`) for localized state.  
+35. How to handle side effects with NgRx Effects and ensure idempotency.  
+36. Alternative state libraries: Akita, NGXS—compare their approaches.  
+37. How to normalize API data with entity adapters.  
+38. Implement optimistic updates and rollback on failure with NgRx.  
+39. How to use RxJS subjects (`BehaviorSubject`, `ReplaySubject`) in services.  
+40. Explain `async` pipe vs. manual subscription/unsubscription.  
+
+## 5. UI & Design Patterns  
+41. Infinite scrolling using `cdk-virtual-scroll-viewport` or custom scroll detection.  
+42. List virtualization for large datasets with Angular CDK Virtual Scroll.  
+43. Skeleton loaders and placeholder UIs during data fetch.  
+44. Debounced search inputs with RxJS `debounceTime`, `distinctUntilChanged`.  
+45. Pagination component design and client vs. server paging.  
+46. Implement drag-and-drop with Angular CDK DragDrop.  
+47. Modal/dialog service pattern using Angular Material Dialog or custom service.  
+48. Toast/notification service with a single outlet component.  
+49. Tabbed interfaces and dynamic component loading.  
+50. Accordion/expansion panels via Angular Material or custom directives.  
+51. Carousel/slider implementation with custom directives or third-party libraries.  
+52. Implement “load more” button pattern vs. infinite scroll trade-offs.  
+53. Form wizard (multi-step form) via child routes or dynamic component injection.  
+54. Breadcrumb component using ActivatedRoute snapshots.  
+55. Alert, confirmation dialogs with service-based APIs.  
+56. Theming and dark mode toggling using CSS variables and Angular CDK Theming.  
+57. Responsive layouts with Flex Layout or CSS Grid integration.  
+58. Accessibility patterns: ARIA roles, `aria-live`, keyboard navigation.  
+59. Image lazy loading with native `loading="lazy"` and intersection observers.  
+60. Sticky headers and footers with CSS and scroll events.  
+
+## 6. HTTP & Backend Integration  
+61. Use `HttpClient` for REST calls, interceptors for headers, error handling.  
+62. Global error interceptor vs. per-request error handler.  
+63. Implement JWT authentication: interceptors for token refresh and retry.  
+64. Caching HTTP responses with interceptors and RxJS `shareReplay`.  
+65. Cancelable requests via `takeUntil` and `HttpRequest` cancellation.  
+66. File upload with `HttpClient` using `FormData`.  
+67. Downloading files/blobs and programmatic download trigger.  
+68. Implement retry strategies with RxJS `retryWhen` and `exponentialBackoff`.  
+69. Streaming large payloads with `reportProgress` and `observe: 'events'`.  
+70. GraphQL integration with Apollo Angular: queries, mutations, subscriptions.  
+
+## 7. Performance Optimization  
+71. Change detection tuning with `OnPush` and manual `markForCheck`.  
+72. Avoiding unnecessary subscriptions by using `async` pipe.  
+73. Pure vs. impure pipes and performance impact.  
+74. Preloading images and assets via `PreloadAllModules` strategy.  
+75. Bundling and code splitting with differential loading (`es5/es2015`).  
+76. Analyze bundle size with `source-map-explorer` or `webpack-bundle-analyzer`.  
+77. Lazy load third-party libraries only when needed.  
+78. Track performance metrics via `Perfume.js` or Angular Profiler.  
+79. Optimize Angular Material theme inclusion to reduce styles size.  
+80. Use trackBy function in `*ngFor` to minimize DOM updates.  
+
+## 8. Testing & QA  
+81. Unit testing components with TestBed, `ComponentFixture`.  
+82. Mock services using `spyOn` and dependency injection overrides.  
+83. Test HTTP services with `HttpClientTestingModule` and `HttpTestingController`.  
+84. Test NgRx store with `provideMockStore` and selectors.  
+85. E2E testing with Protractor or Cypress—compare setups.  
+86. Accessibility testing with `axe-core/angular`.  
+87. Snapshot testing for templates (Storybook integration).  
+88. Test routing with `RouterTestingModule` and `Location`.  
+89. Test asynchronous code with `fakeAsync` and `tick` vs. `async/await`.  
+90. Measure code coverage with Karma coverage reporter.  
+
+## 9. Security & Best Practices  
+91. Prevent XSS by using Angular’s built-in sanitization; avoid `innerHTML`.  
+92. Protect against CSRF via server-side tokens; Angular’s XSRF support.  
+93. Secure JWT storage: in-memory vs. cookie vs. local storage trade-offs.  
+94. HTTP header hardening: `Content-Security-Policy`, `X-Frame-Options`.  
+95. Implement role-based UI elements via structural directives.  
+96. Audit sensitive operations and route access with route guards.  
+97. Avoid exposing secrets in environment files—use CI/CD injection.  
+98. Dependency vulnerability scanning with `npm audit`, `retire.js`.  
+99. Enforce strict TypeScript typing and linting (TSLint/ESLint).  
+100. Secure forms against overposting by whitelisting fields.  
+
+## 10. Build, Deployment & Tooling  
+101. Angular CLI build targets: development vs. production flags.  
+102. Differential loading for modern browsers.  
+103. Ahead-of-time (AOT) vs. Just-in-time (JIT) builds.  
+104. Custom webpack configuration via `ngx-build-plus`.  
+105. Continuous integration with GitHub Actions, GitLab CI, or Jenkins pipelines.  
+106. Dockerizing Angular apps and serving via NGINX.  
+107. Integrate with CDNs for static asset hosting.  
+108. Cache busting strategies: file hashing and service worker.  
+109. Enabling service workers for PWA support with `@angular/pwa`.  
+110. Build optimizations: removing polyfills or using `es2020` targets.  
+
+## 11. Micro-Frontend Integration  
+111. Module federation with Webpack 5 in Angular applications.  
+112. Single-spa integration via `@single-spa/angular`.  
+113. Shared dependency management to avoid duplicate bundles.  
+114. Cross-framework composition (React in Angular host).  
+115. Authentication and state sharing between micro-frontends.  
+116. Styling isolation using CSS modules or Shadow DOM.  
+117. Routing integration across multiple micro-frontends.  
+118. Lazy loading remote modules and fallback UIs.  
+119. Deployment strategies for independent micro-frontend lifecycle.  
+120. Logging and error isolation per micro-frontend.  
 
 ---
 
