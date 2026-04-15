@@ -10,6 +10,7 @@ Thanks @Perplexity and @Airtel
 - [GOLANG](./GO.MD)
 - [GOLANG INTERVIEW](./GO_1000.MD)
 - [JAVASCRIPT](./VANILLAJS.MD)
+- [JAVA OOPS](./java-oop)
 - [REACT BASICS](./REACT-101.MD)
 - [ANGULAR](./ANGULAR.MD)
 - [LWC](./LWC.MD)
